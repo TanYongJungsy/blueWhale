@@ -3,9 +3,6 @@ package com.mingx.config;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
-
-import org.apache.commons.lang.StringUtils;
-
 import com.baomidou.mybatisplus.core.exceptions.MybatisPlusException;
 import com.baomidou.mybatisplus.core.toolkit.StringPool;
 import com.baomidou.mybatisplus.generator.AutoGenerator;
@@ -19,6 +16,7 @@ import com.baomidou.mybatisplus.generator.config.TemplateConfig;
 import com.baomidou.mybatisplus.generator.config.po.TableInfo;
 import com.baomidou.mybatisplus.generator.config.rules.NamingStrategy;
 import com.baomidou.mybatisplus.generator.engine.FreemarkerTemplateEngine;
+import org.apache.commons.lang3.StringUtils;
 
 /**
  *     代码生成工具，执行前先确认对应的数据库连接信息

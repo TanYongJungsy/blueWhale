@@ -1,4 +1,4 @@
-package com.central.common.model;
+package com.mingx.entity;
 
 import com.mingx.enums.CodeEnum;
 import lombok.AllArgsConstructor;

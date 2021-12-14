@@ -15,11 +15,11 @@ import lombok.experimental.Accessors;
  * @since 2021-12-14
  */
 @Data
-@EqualsAndHashCode(callSuper = false)
-@Accessors(chain = true)
+//@EqualsAndHashCode(callSuper = false)
+//@Accessors(chain = true)
 public class SysUser implements Serializable {
 
-    private static final long serialVersionUID = 1L;
+//    private static final long serialVersionUID = 1L;
 
     private Integer id;
 
@@ -29,11 +29,11 @@ public class SysUser implements Serializable {
 
     private String birthday;
 
-    private LocalDateTime createTime;
+    private String createTime;
 
     private String createBy;
 
-    private LocalDateTime updateTime;
+    private String updateTime;
 
     private String updateBy;
 
