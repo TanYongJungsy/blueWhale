@@ -9,9 +9,9 @@
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <modules>
-        <module>severbusiness</module>
+        <module>sever-user</module>
         <module>commons</module>
-<!--        <module>severfeign</module>-->
+        <module>server-gateway</module>
     </modules>
 
     <parent>
