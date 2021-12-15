@@ -1,13 +1,10 @@
 package com.mingx.controller;
 
-
-import com.mingx.utils.CacheUtity;
-import com.mingx.utils.RedisUtil;
 import com.mingx.entity.Result;
 import com.mingx.pojo.SysUser;
 import com.mingx.service.ISysUserService;
+import com.mingx.utils.RedisOps;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.data.redis.serializer.JdkSerializationRedisSerializer;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -20,29 +17,48 @@ import javax.annotation.Resource;
 @RequestMapping("/user")
 public  class testController {
 
-//    @Value("${param.config}")
+//    @Value("${spring.redis}")
 //    private String config;
 
     @Resource
     private ISysUserService  iSysUserService;
 
     @Resource
-    private RedisUtil redisUtil;
+    private RedisOps RedisOps;
 
     @GetMapping("/helloUser")
     public Result helloUser() {
 
-        SysUser user=iSysUserService.getById("1");
-        System.out.println(user);
-      if( redisUtil.get(user.getName())!=null){
-          System.out.println("99999");
-      }
 
-   return Result.succeed(   redisUtil.get(user.getName()) );
+        SysUser user=iSysUserService.getById("1");
+        RedisOps.setJsonString("pppp",user,10);
+        System.out.println(RedisOps.getJsonObject(user.getName(),SysUser.class));
+
+      //  System.out.println(user);
+        return Result.succeed();
     }
 
     public static void main(String[] args) {
 
+
+//            try {
+//                //连接本地Redis服务
+//                Jedis jedis = new Jedis("1.117.239.58", 6379);
+//
+//                jedis.auth("tyj666");//密码
+//                String ping = jedis.ping();
+//                if (ping.equalsIgnoreCase("PONG")) {
+//                    System.out.println("redis缓存有效！" + ping);
+//                    jedis.set("test","good");
+//                }
+//                jedis.close(); // 释放连接资源
+//            } catch (Exception e) {
+//                System.out.println("redis缓存失败！");
+//
+//            }
+
+
+    }
     }
 
-}
+
