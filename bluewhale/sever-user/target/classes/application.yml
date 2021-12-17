@@ -10,3 +10,7 @@ spring:
         server-addr: 127.0.0.1:8848
   profiles:
     active: dev
+feign:
+  hystrix:
+    # 开启hystrix熔断
+    enabled: false

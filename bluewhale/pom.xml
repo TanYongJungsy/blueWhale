@@ -12,6 +12,7 @@
         <module>sever-user</module>
         <module>commons</module>
         <module>server-gateway</module>
+        <module>sever-stock</module>
     </modules>
 
     <parent>
@@ -27,6 +28,8 @@
         <lombok.version>1.16.20</lombok.version>
         <druid.version>1.0.29</druid.version>
         <mybatis-plus.version>3.0.6</mybatis-plus.version>
+<!--        <feign.version>10.1.0</feign.version>-->
+<!--        <feign-form.version>3.5.0</feign-form.version>-->
     </properties>
 
     <dependencyManagement>

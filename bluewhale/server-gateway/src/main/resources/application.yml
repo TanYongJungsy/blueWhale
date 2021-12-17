@@ -1,0 +1,29 @@
+spring:
+  application:
+    name: sever-gateway
+  cloud:
+    nacos:
+      config:
+        server-addr: 127.0.0.1:8848
+        file-extension: yml # 假如不配置，则nacos远程配置文件的后缀为.properties
+      discovery:
+        server-addr: 127.0.0.1:8848
+  profiles:
+    active: dev
+zuul:
+  routes:
+    api-user:
+      path: /api-user/**
+      serviceId: sever-user
+      #sensitiveHeaders：会过滤客户端请求中的和该配置项匹配的headers
+      #zuul.ignoredHeaders会过滤服务之间通信附带的headers
+    api-stock:
+      path: /api-stock/**
+      serviceId: sever-stock
+#feigh自带断路器,但是默认是没有打开的
+#feigh自带断路器,但是默认是没有打开的
+feign:
+  hystrix:
+    enabled: true               #打开断路器
+    polling-interval-ms: 2000   #刷新间隔
+
