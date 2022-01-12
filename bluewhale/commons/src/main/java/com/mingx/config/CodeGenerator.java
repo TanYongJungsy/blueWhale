@@ -60,7 +60,7 @@ public class CodeGenerator {
 
         // 数据源配置
         DataSourceConfig dsc = new DataSourceConfig();
-        dsc.setUrl("jdbc:mysql://1.117.239.58:3306/BlueWhale?characterEncoding=utf8&useSSL=false&serverTimezone=UTC&rewriteBatchedStatements=true");//oa为我自己的数据库
+        dsc.setUrl("jdbc:mysql://1.117.239.58:3306/bluewhale?characterEncoding=utf8&useSSL=false&serverTimezone=UTC&rewriteBatchedStatements=true");//oa为我自己的数据库
         dsc.setDriverName("com.mysql.cj.jdbc.Driver"); //设置数据库驱动,因为我的数据库版本是mysql5.7,所以使用该驱动
         dsc.setUsername("root"); //数据库名称
         dsc.setPassword("3090876442tyj"); //数据库密码

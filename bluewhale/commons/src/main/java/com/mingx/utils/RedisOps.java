@@ -10,7 +10,6 @@ public class RedisOps {
 
     Jedis jedis = RedisConnection.getJedis();
     public  void setJsonString(String key, Object object,int time) {
-
         jedis.set(key, JSON.toJSONString(object),"NX","EX",time);
         jedis.close();
     }

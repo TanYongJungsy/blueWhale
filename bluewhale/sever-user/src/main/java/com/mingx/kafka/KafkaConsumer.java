@@ -74,18 +74,18 @@ public class KafkaConsumer {
     public void onMessage6(ConsumerRecord<?, ?> record) {
         System.out.println(record.value());
     }
-    /**
-     * @Title 消息转发
-     * @Description 从topic1接收到的消息经过处理后转发到topic2
-     * @Author long.yuan
-     * @Date 2020/3/23 22:15
-     * @Param [record]
-     * @return void
-     **/
-//    @KafkaListener(topics = {"topic1"})
-//    @SendTo("topic2")
-//    public String onMessage7(ConsumerRecord<?, ?> record) {
-//        return record.value()+"-forward message";
-//    }
+//    /**
+//     * @Title 消息转发
+//     * @Description 从topic1接收到的消息经过处理后转发到topic2
+//     * @Author long.yuan
+//     * @Date 2020/3/23 22:15
+//     * @Param [record]
+//     * @return void
+//     **/
+////    @KafkaListener(topics = {"topic1"})
+////    @SendTo("topic2")
+////    public String onMessage7(ConsumerRecord<?, ?> record) {
+////        return record.value()+"-forward message";
+////    }
 
 }
