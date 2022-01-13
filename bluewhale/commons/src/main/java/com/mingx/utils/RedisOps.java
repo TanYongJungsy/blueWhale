@@ -25,11 +25,11 @@ public class RedisOps {
 
 
 
-//        public  void hSet(String key,Object value){
-//            Jedis jedis = RedisConnection.getJedis();
-//            jedis.hset("login",key,JSON.toJSONString(value));
-//            jedis.close();
-//        }
+        public  void hSet(String key,Object value){
+            Jedis jedis = RedisConnection.getJedis();
+            jedis.hset("login",key,JSON.toJSONString(value));
+            jedis.close();
+        }
 //
 //        public  String hGet(String key){
 //            Jedis jedis = RedisConnection.getJedis();
