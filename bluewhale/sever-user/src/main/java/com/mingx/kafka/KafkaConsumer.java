@@ -15,7 +15,7 @@ import org.springframework.stereotype.Component;
 
 import java.util.List;
 
-@Component
+//@Component
 public class KafkaConsumer {
     // 消费监听
 //    @KafkaListener(topics = {"test"} ,groupId = "0")
@@ -51,7 +51,7 @@ public class KafkaConsumer {
     @Autowired
     ConsumerFactory consumerFactory;
     // 消息过滤器
-    @Bean
+   // @Bean
     public ConcurrentKafkaListenerContainerFactory filterContainerFactory() {
         ConcurrentKafkaListenerContainerFactory factory = new ConcurrentKafkaListenerContainerFactory();
         factory.setConsumerFactory(consumerFactory);

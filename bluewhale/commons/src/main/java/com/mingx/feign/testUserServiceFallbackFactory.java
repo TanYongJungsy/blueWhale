@@ -1,6 +1,5 @@
 package com.mingx.feign;
 
-import com.mingx.entity.Result;
 import com.mingx.service.testFeignService;
 import feign.hystrix.FallbackFactory;
 import lombok.extern.slf4j.Slf4j;

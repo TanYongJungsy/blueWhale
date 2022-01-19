@@ -4,6 +4,7 @@ import com.mingx.entity.Result;
 import com.mingx.service.ISysUserService;
 import com.mingx.service.testFeignService;
 import com.mingx.utils.RedisOps;
+import com.mingx.utils.RedisRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -30,21 +31,21 @@ public  class testController {
     @Resource
     private RedisOps RedisOps;
 
+    @Resource
+    RedisRepository redisRepository;
+
     //@Resource
     //private KafkaProducer kafkaProducer;
 
-//    @GetMapping("/helloUser")
-  //  public Result helloUser() {
+    @GetMapping("/helloUser")
+    public Result helloUser() {
 
 
-      //  feignService.getTokenByUserId(999L);
-//        SysUser user=iSysUserService.getById("1");
-//        RedisOps.setJsonString("pppp",user,10);
-//        System.out.println(RedisOps.getJsonObject(user.getName(),SysUser.class));
-
-      //  System.out.println("99999999999999999999999");
-       // return Result.succeed();
-    //}
+        //feignService.getTokenByUserId(999L);
+        redisRepository.putHashValue("tyj","name","存入redie客户端不能乱码谢谢");
+        System.out.println( redisRepository.getHashValues("tyj","name"));
+        return Result.succeed();
+    }
 
 //    @GetMapping("/testkafka")
 //    @Transactional(rollbackFor = Exception.class)

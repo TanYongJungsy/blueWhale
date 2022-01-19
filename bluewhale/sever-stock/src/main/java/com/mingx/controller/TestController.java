@@ -14,9 +14,6 @@ public class TestController {
     @GetMapping("/test")
     public void helloUser(@RequestParam("userCode") Long userId) {
 
-
-        String a=null;
-        System.out.println(a.length());
        System.out.println("服务调用成功拿到了"+userId);
 
         //  System.out.println(user);
