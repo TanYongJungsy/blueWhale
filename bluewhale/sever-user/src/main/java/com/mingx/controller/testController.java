@@ -42,8 +42,8 @@ public  class testController {
 
 
         //feignService.getTokenByUserId(999L);
-        redisRepository.putHashValue("tyj","name","存入redie客户端不能乱码谢谢");
-        System.out.println( redisRepository.getHashValues("tyj","name"));
+        redisRepository.putHashValue("zyj","name","存入redie客户端不能乱码谢谢");
+        System.out.println( redisRepository.getHashValues("zyj","name"));
         return Result.succeed();
     }
 
