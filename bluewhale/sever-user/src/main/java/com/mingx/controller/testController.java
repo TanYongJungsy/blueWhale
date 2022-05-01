@@ -37,19 +37,29 @@ public  class testController {
     //@Resource
     //private KafkaProducer kafkaProducer;
 
+//    @Resource
+//    private KafkaProducer kafkaProducer;
+
+
     @GetMapping("/helloUser")
     public Result helloUser() {
 
 
         //feignService.getTokenByUserId(999L);
-        redisRepository.putHashValue("zyj","name","存入redie客户端不能乱码谢谢");
-        System.out.println( redisRepository.getHashValues("zyj","name"));
+        redisRepository.putHashValue("zyj", "name", "存入redie客户端不能乱码谢谢");
+        System.out.println(redisRepository.getHashValues("zyj", "name"));
         return Result.succeed();
     }
 
-//    @GetMapping("/testkafka")
+    //    @GetMapping("/testkafka")
 //    @Transactional(rollbackFor = Exception.class)
     // public void sendMsg() { kafkaProducer.send("this is a test kafka topic messagel"); }}
+//    @GetMapping("/testKafka")
+//    @Transactional(rollbackFor = Exception.class)
+//    public Result testKafka() {
+//        kafkaProducer.send("6666");
+//        return Result.succeed();
+//    }
 
 
 }

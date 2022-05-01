@@ -13,10 +13,4 @@ zuul:
     api-stock:
       path: /api-stock/**
       serviceId: sever-stock
-#feigh自带断路器,但是默认是没有打开的
-#feigh自带断路器,但是默认是没有打开的
-feign:
-  hystrix:
-    enabled: true               #打开断路器
-    polling-interval-ms: 2000   #刷新间隔
 

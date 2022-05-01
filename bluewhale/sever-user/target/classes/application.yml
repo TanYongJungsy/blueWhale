@@ -1,6 +1,4 @@
 spring:
-  application:
-    name: sever-user
   profiles:
     active: dev
 feign:
