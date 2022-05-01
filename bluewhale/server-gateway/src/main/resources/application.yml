@@ -1,6 +1,4 @@
 spring:
-  application:
-    name: sever-gateway
   profiles:
     active: dev
 zuul:
