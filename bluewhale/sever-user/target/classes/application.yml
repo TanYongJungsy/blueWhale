@@ -3,5 +3,24 @@ spring:
     active: dev
 feign:
   hystrix:
-    # 开启hystrix熔断
     enabled: true
+  client:
+    config:
+      sever-stock:
+        loggerLevel: FULL
+        connectTimeout: 10000 #单位毫秒
+        readTimeout: 10000 #单位毫秒
+        # contract: feign.Contract.Default #(还原原生注解)
+        requestInterceptors[0]:
+             com.mingx.config.CustomerFeignInterceptor
+sever-stock:
+  ribbon:
+    NFLoadBalancerRuleClassName: com.alibaba.cloud.nacos.ribbon.NacosRule
+
+#logging:
+#  level:
+#    com.mingx.feign: debug
+
+
+
+

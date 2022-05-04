@@ -1,4 +1,4 @@
-package com.mingx.service;
+package com.mingx.feign;
 
 
 import com.baomidou.mybatisplus.extension.service.IService;

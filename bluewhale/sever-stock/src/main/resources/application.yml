@@ -1,6 +1,3 @@
-server:
-  port: 7003
-
 spring:
   profiles:
     active: dev

@@ -1,10 +1,10 @@
-package com.mingx.service.impl;
+package com.mingx.feign.impl;
 
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.mingx.mapper.SysUserMapper;
 import com.mingx.pojo.SysUser;
-import com.mingx.service.ISysUserService;
+import com.mingx.feign.ISysUserService;
 import org.springframework.stereotype.Service;
 
 import java.util.*;

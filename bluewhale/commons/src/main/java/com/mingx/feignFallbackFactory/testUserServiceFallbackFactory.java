@@ -1,6 +1,6 @@
-package com.mingx.feign;
+package com.mingx.feignFallbackFactory;
 
-import com.mingx.service.testFeignService;
+import com.mingx.feign.testFeignService;
 import feign.hystrix.FallbackFactory;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
