@@ -1,6 +1,7 @@
 spring:
   profiles:
     active: dev
+
 feign:
   hystrix:
     enabled: true
@@ -11,8 +12,9 @@ feign:
         connectTimeout: 10000 #单位毫秒
         readTimeout: 10000 #单位毫秒
         # contract: feign.Contract.Default #(还原原生注解)
-        requestInterceptors[0]:
+        requestInterceptors[0]: #feign拦截器
              com.mingx.config.CustomerFeignInterceptor
+
 sever-stock:
   ribbon:
     NFLoadBalancerRuleClassName: com.alibaba.cloud.nacos.ribbon.NacosRule

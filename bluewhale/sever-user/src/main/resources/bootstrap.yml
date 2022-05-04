@@ -9,6 +9,16 @@ spring:
       config:
         server-addr: 127.0.0.1:8848
         file-extension: yml # 假如不配置，则nacos远程配置文件的后缀为.properties
+        shared-dataids:  common.yml #公共配置 下标决定优先级
+        refreshable‐dataids: common.yml #生效公共配置
+#        ext-config[0]:
+#        data-id: common2.yml
+#        group: DEFAULT_GROUP
+#        refresh: true
+        ext-config:
+          - data-id: common2.yml
+            group: DEFAULT_GROUP
+            refresh: true
       discovery:
         server-addr: 127.0.0.1:8848
   profiles:
